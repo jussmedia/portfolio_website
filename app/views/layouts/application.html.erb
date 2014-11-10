@@ -1,0 +1,11 @@
+<%= render partial: 'layouts/shared/header' %>
+
+<!--page_container-->
+<div class="page_container">
+  <%= yield %>
+</div>
+<!--//page_container-->
+
+<%= render partial: 'layouts/shared/footer' %>
+
+<% parent_layout 'base' %>
