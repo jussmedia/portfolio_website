@@ -8,6 +8,8 @@ gem 'rails', '4.1.4'
 gem 'mysql2'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
+# Use jquery UI assets
+gem 'jquery-ui-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
