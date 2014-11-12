@@ -8,4 +8,8 @@
 
 <%= render partial: 'layouts/shared/footer' %>
 
+<% content_for :javascript do %>
+  <%= javascript_include_tag params[:controller] %> 
+<% end %>
+
 <% parent_layout 'base' %>
