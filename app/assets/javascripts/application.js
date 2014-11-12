@@ -16,4 +16,5 @@
 //= require turbolinks
 //= require bootstrap
 //= require owl.carousel
+//= require slick.min
 //= require home
