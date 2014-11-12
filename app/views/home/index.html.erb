@@ -5,6 +5,7 @@
 <!--slider-->
 <div id="main_slider">
     <div class="camera_wrap" id="camera_wrap_1">
+      <% # Load random images  %>
       <div data-src="<%=image_url('placeholder/slider/1.jpg') %>"></div>
       <div data-src="<%=image_url('placeholder/slider/2.jpg') %>"></div>
       <div data-src="<%=image_url('placeholder/slider/3.jpg') %>"></div>
@@ -13,7 +14,7 @@
 </div>
 <!--//slider-->
 
-        <!--planning-->
+<!--planning-->
 <div class="wrap planning">
   <div class="container">
     <div class="row">
@@ -66,33 +67,33 @@
   	<h2 class="upper">featured works</h2>
   	<div class="row">
       <div class="col-md-12">
-        <ul id="mycarousel" class="jcarousel-skin-tango">
-          <li>
+        <ul id="featured_work" class="owl-carousel">
+          <li class="item">
           	<div class="hover_img">
             	<a href="<%= image_url('placeholder/featured_works/1.jpg') %>" rel="prettyPhoto[portfolio1]"><img src="<%= image_url('placeholder/featured_works/1.jpg') %>" alt="" /><span class="portfolio_zoom1"></span></a>
             </div>
           </li>
-          <li>
+          <li class="item">
           	<div class="hover_img">
             	<a href="<%= image_url('placeholder/featured_works/2.jpg') %>" rel="prettyPhoto[portfolio1]"><img src="<%= image_url('placeholder/featured_works/2.jpg') %>" alt="" /><span class="portfolio_zoom1"></span></a>
             </div>
           </li>
-          <li>
+          <li class="item">
             <div class="hover_img">
             	<a href="<%= image_url('placeholder/featured_works/3.jpg') %>" rel="prettyPhoto[portfolio1]"><img src="<%= image_url('placeholder/featured_works/3.jpg') %>" alt="" /><span class="portfolio_zoom1"></span></a>
             </div>
           </li>
-          <li>
+          <li class="item">
             <div class="hover_img">
             	<a href="<%= image_url('placeholder/featured_works/4.jpg') %>" rel="prettyPhoto[portfolio1]"><img src="<%= image_url('placeholder/featured_works/4.jpg') %>" alt="" /><span class="portfolio_zoom1"></span></a>
             </div>
           </li>
-          <li>
+          <li class="item">
           	<div class="hover_img">
             	<a href="<%= image_url('placeholder/featured_works/1.jpg') %>" rel="prettyPhoto[portfolio1]"><img src="<%= image_url('placeholder/featured_works/1.jpg') %>" alt="" /><span class="portfolio_zoom1"></span></a>
             </div>
           </li>
-          <li>
+          <li class="item">
           	<div class="hover_img">
             	<a href="<%= image_url('placeholder/featured_works/2.jpg') %>" rel="prettyPhoto[portfolio1]"><img src="<%= image_url('placeholder/featured_works/2.jpg') %>" alt="" /><span class="portfolio_zoom1"></span></a>
             </div>
@@ -122,29 +123,29 @@
       </div>
       <div class="col-md-6">
       	<h2 class="title">Latest news</h2>
-        <ul id="newscarousel" class="jcarousel-skin-tango">
-          <li>
+        <ul id="newscarousel" class="owl-carousel">
+          <li class="item">
           	<div class="news_date">15 apr<span>2019</span></div>
             <div class="news_t"><a href="#">Sed massa dui, porta corper ac varius!</a></div>
             <div class="news">Posted by <a href="#">Anna Smith</a>  /  In <a href="#">City</a><br/>Tags: <a href="#">eget</a>, <a href="#">mauris</a></div>
             <div class="news_info">Tristique tincidunt cursus sed, ornare ncidunt eque a tristique. Phasellus porttitor mollis tortor etoq vestibulum. Quisque non lacus tortor, quis cumsan nibh. Lorem ipsum dolor sit amet, consectetur icing elit. Nullam pulvinarteses lorem sed dui euismod eget. <a href="#">Read more...</a></div>
             <div class="clear"></div>
           </li>
-          <li>
+          <li class="item">
           	<div class="news_date">05 apr<span>2019</span></div>
             <div class="news_t"><a href="#">eget &amp; massa viviamu marius mas</a></div>
             <div class="news">Posted by <a href="#">Anna Smith</a>  /  In <a href="#">City</a><br/>Tags: <a href="#">eget</a>, <a href="#">mauris</a></div>
             <div class="news_info">Cursus sed, aliquet nec odio. Integer ornare tincidunt neque a tristique. Phasellus porttitor millis tortor etoq vestibulum. Quisque ont lacus toirtor uis accumsan nibh. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ulvinarteses em sed. <a href="#">Read more...</a></div>
             <div class="clear"></div>
           </li>
-          <li>
+          <li class="item">
           	<div class="news_date">15 apr<span>2019</span></div>
             <div class="news_t"><a href="#">Sed massa dui, porta corper ac varius!</a></div>
             <div class="news">Posted by <a href="#">Anna Smith</a>  /  In <a href="#">City</a><br/>Tags: <a href="#">eget</a>, <a href="#">mauris</a></div>
             <div class="news_info">Tristique tincidunt cursus sed, ornare ncidunt eque a tristique. Phasellus porttitor mollis tortor etoq vestibulum. Quisque non lacus tortor, quis cumsan nibh. Lorem ipsum dolor sit amet, consectetur icing elit. Nullam pulvinarteses lorem sed dui euismod eget. <a href="#">Read more...</a></div>
             <div class="clear"></div>
           </li>
-          <li>
+          <li class="item">
           	<div class="news_date">05 apr<span>2019</span></div>
             <div class="news_t"><a href="#">eget &amp; massa viviamu marius mas</a></div>
             <div class="news">Posted by <a href="#">Anna Smith</a>  /  In <a href="#">City</a><br/>Tags: <a href="#">eget</a>, <a href="#">mauris</a></div>
@@ -164,9 +165,10 @@
     <h2 class="upper">latest posts</h2>
     <div class="row">
       <div class="col-md-12">
-        <ul id="mycarousel2" class="jcarousel-skin-tango">
+        <ul id="carousel_post" class="">
+          <% # Load 6 most recent blog post #%>
           <li>
-          	<div class="post_carousel">
+          	<div>
             	<img src="<%= image_url('placeholder/home_blog/1.jpg') %>" alt="" />
             	<div class="title_t"><a href="#">ipsum dolor ac egestas mas</a></div>
               <div class="post_meta">
