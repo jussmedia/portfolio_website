@@ -1,4 +1,6 @@
 @import 'base/bootstrap-custom';
 @import 'base/layout';
-@import 'skins/owl-theme';
+@import "owl.carousel";
+@import "owl.theme";
+@import 'skins/owl-overrides';
 @import 'slick'
