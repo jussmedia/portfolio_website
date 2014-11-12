@@ -25,6 +25,8 @@ gem 'awesome_print'
 # Ruby/ProgressBar is a text progress bar library for Ruby.
 gem 'ruby-progressbar'
 
+gem 'owlcarousel-rails'
+
 # *****************
 #
 # ASSETS
