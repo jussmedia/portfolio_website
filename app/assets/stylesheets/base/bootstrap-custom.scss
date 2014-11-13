@@ -199,3 +199,34 @@ h3 code {
     text-decoration: none;
   }
 }
+h2 {
+  font-size: 21px;
+}
+
+h2.title {
+	padding:0;
+	margin:0 0 19px 0;
+	line-height:28px;
+	text-transform:uppercase;
+	color:#313131;
+	font-family: 'Open Sans', sans-serif;
+	font-weight:800;
+  a {
+    font-size:21px;
+    color:#313131;
+    font-family: 'Open Sans', sans-serif;
+    font-weight:800;
+    text-transform:uppercase;
+    &:hover {
+      color:#d00b01;
+      text-decoration:none;
+    }
+  }
+}
+
+h4 {
+    font-size: 16px;
+    line-height: 25px;
+    margin-bottom: 10px;
+    font-weight: 800;
+}

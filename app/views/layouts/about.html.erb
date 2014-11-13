@@ -1,0 +1,14 @@
+<%= render 'layouts/shared/breadcrumb' %>
+<div class="wrap">
+  <div class="container">
+    <section>
+      <div class="row">
+        <%= yield (:top) %>
+      </div>
+    </section>
+    <section>
+      <%= yield (:bottom) %>
+    </section>
+  </div>
+</div>
+<% parent_layout 'application' %>

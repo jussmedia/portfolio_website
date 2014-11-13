@@ -33,28 +33,6 @@ body {
   clear: both;
   font-size: 0;
 }
-
-h2.title {
-  padding: 0;
-  margin: 0 0 19px 0;
-  line-height: 28px;
-  text-transform: uppercase;
-  color: #313131;
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 800;
-  a {
-    font-size: 21px;
-    color: #313131;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 800;
-    text-transform: uppercase;
-    &:hover {
-      color: #d00b01;
-      text-decoration: none;
-    }
-  }
-}
-
 a, input, select, textarea {
   outline: none !important;
 }
