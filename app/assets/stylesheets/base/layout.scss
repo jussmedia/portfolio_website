@@ -510,6 +510,28 @@ h2.upper {
   }
 }
 
+div.foot_logo {
+  a {
+    background-image: asset-url('jussmedia-foot-logo.png');
+    background-repeat: no-repeat;
+    height: 60px;
+    display: block;
+    text-indent: -9999px;
+    text-align: left;
+    transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    &.foot_logo_link {
+    background-position: 0px -60px;
+    width: 277px;
+      &:hover {
+        background-position: 0px 0px;
+      }
+    }
+  }
+}
+
 #footer .follow_us {
   padding: 4px 0 10px 0;
   ul li {
@@ -558,11 +580,11 @@ h2.upper {
         background-position: -93px -18px;
       }
     }
-    &.delicious {
-      background-position: -126px 0;
-      width: 14px;
+    &.instagram {
+      background-position: -125px 0;
+      width: 15px;
       &:hover {
-        background-position: -126px -18px;
+        background-position: -125px -18px;
       }
     }
   }
