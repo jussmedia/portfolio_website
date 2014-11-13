@@ -1,1 +1,49 @@
-<h1>HEADER</h1>
+<div class="header">
+  <div class="wrap">
+  	<div class="navbar navbar_ clearfix">
+    	<div class="container">
+        <div class="row">
+          <div class="col-md-4">
+          	<div class="logo"><%= link_to image_tag('jussmedia-logo.png') %></div>
+          </div>
+          <div class="col-md-8">
+          	<div class="follow_us">
+              <ul>
+                <li><%= link_to "Facebook", 'http://fb.jussmedia.com', target: '_blank', class: 'facebook' %></li>
+                <li><%= link_to "Vimeo", 'http://vimeo.jussmedia.com', target: '_blank', class: 'vimeo' %></li>
+                <li><%= link_to "Tumblr", 'http://tumblr.jussmedia.com', target: '_blank', class: 'tumblr' %></li>
+                <li><%= link_to "Twitter", 'http://twitter.jussmedia.com', target: '_blank', class: 'twitter' %></li>
+                <li><%= link_to "Instagram", 'http://ig.jussmedia.com', target: '_blank', class: 'instagram' %></li>
+              </ul>
+            </div>
+            <div class="clear"></div>
+            <nav id="main_menu">
+              <div class="menu_wrap">
+                <ul class="nav sf-menu">
+                  <li class="current"><%= link_to 'Home', root_path %></li>
+                  <li><%= link_to 'About', about_index_path %></li>
+                  <li class="sub-menu"><a href="javascript:{}">Portfolio</a>
+                    <ul>
+                      <li><a href="#"><span>-</span>2 Columns</a></li>
+                      <li><a href="#"><span>-</span>3 Columns</a></li>
+                      <li><a href="#"><span>-</span>4 Columns</a></li>
+                    </ul>
+                  </li>
+                  <li class="sub-menu"><%= link_to 'Blog', '#' %>
+                   <ul>
+                     <li><a href="#"><span>-</span>Blog with right sidebar</a></li>
+                     <li><a href="#"><span>-</span>Blog post</a></li>
+                   </ul>
+                  </li>
+                  <li>
+                    <a href="#">Contact</a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

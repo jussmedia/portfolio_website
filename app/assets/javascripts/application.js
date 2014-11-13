@@ -13,3 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require bootstrap
+//= require slick.min
+//= require owl.carousel.min
+//= require home
