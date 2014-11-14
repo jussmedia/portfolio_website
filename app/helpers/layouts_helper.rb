@@ -5,7 +5,7 @@ module LayoutsHelper
   end
 
   def javascript(*args)
-    content_for(:script) { javascript_include_tag(*args) }
+    content_for(:javascript) { javascript_include_tag(*args) }
   end
 
   def parent_layout(layout)

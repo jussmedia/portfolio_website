@@ -58,9 +58,9 @@
           <div class="7">
             <div class="foot_right_block">
               <div class="fright">
-                <form action="#" method="post">
-                  <input class="inp_search" name="name" type="text" value="Search the Site" onfocus="if (this.value == 'Search the Site') this.value = '';" onblur="if (this.value == '') this.value = 'Search the Site';" />
-                </form>
+                <%= form_for '#' do | f | %>
+                  <%= f.text_field :name, placeholder: 'Search the Site', class: 'inp_search' %>
+                <% end %>
               </div>
               <div class="follow_us">
               	<ul>
