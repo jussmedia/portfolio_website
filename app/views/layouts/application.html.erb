@@ -1,11 +1,14 @@
 <% content_for :head do %>
-  <%= stylesheet_link_tag params[:controller] %> 
+  <%= stylesheet_link_tag params[:controller] %>
 <% end %>
 <%= render partial: 'layouts/shared/header' %>
 
 <!--page_container-->
 <div class="page_container">
+  <%= render 'layouts/messages' %>
+
   <%= yield %>
+  
 </div>
 <!--//page_container-->
 
