@@ -18,12 +18,6 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
 
-# Great Ruby dubugging companion: pretty print Ruby objects to visualize their structure.
-# Supports custom object formatting via plugins
-gem 'awesome_print'
-
-# Ruby/ProgressBar is a text progress bar library for Ruby.
-gem 'ruby-progressbar'
 
 # gem 'owlcarousel-rails'
 
@@ -66,6 +60,14 @@ group :development do
 
   # Preview mail in the browser instead of sending.
   gem "letter_opener"
+
+  # Great Ruby dubugging companion: pretty print Ruby objects to visualize their structure.
+  # Supports custom object formatting via plugins
+  gem 'awesome_print'
+
+  # Ruby/ProgressBar is a text progress bar library for Ruby.
+  gem 'ruby-progressbar'
+
 end
 
 group :test do
@@ -73,6 +75,7 @@ group :test do
   # rails g minitest:install
   gem 'minitest-rails', github: 'blowmage/minitest-rails'
   gem 'minitest-spec-rails', github: 'metaskills/minitest-spec-rails'
+  gem "codeclimate-test-reporter", group: :test, require: nil
 end
 
 # Use ActiveModel has_secure_password
