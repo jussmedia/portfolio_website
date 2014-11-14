@@ -6,6 +6,8 @@ cache:
   directories:
     - vendor/bundle
 before_script:
+  - "cp ./config/database.yml.travis ./config/database.yml"
+  - mysql -e 'create database portfolio_website_test;'
   - "bundle exec rake db:nuke_pave"
 env:
   global:
