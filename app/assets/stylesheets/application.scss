@@ -12,3 +12,9 @@
  *
  *= require_self
  */
+$link-color: #d00b01;
+$brand-primary: #c5c5c5;
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "main";

@@ -12,11 +12,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-  <p class="flash"><%= flash.notice %></p>
+  <div class="alert alert-info alert-dismissible"><%= flash.notice %></div>
 
   <%= yield %>
 
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= yield(:script) %>
+  <%= yield(:javascript) %>
 </body>
 </html>
