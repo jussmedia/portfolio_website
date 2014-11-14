@@ -2,7 +2,8 @@ class User < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable
+         :recoverable, :rememberable, :trackable, :validatable,
+         :omniauthable, :omniauth_providers => [:facebook, :gplus, :instagram, :twitter]
 end
 
 # == Schema Information
@@ -31,6 +32,8 @@ end
 #  locked_at              :datetime
 #  created_at             :datetime
 #  updated_at             :datetime
+#  provider               :string(255)
+#  uid                    :string(255)
 #
 # Indexes
 #

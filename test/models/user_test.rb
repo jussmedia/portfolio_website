@@ -34,6 +34,8 @@ end
 #  locked_at              :datetime
 #  created_at             :datetime
 #  updated_at             :datetime
+#  provider               :string(255)
+#  uid                    :string(255)
 #
 # Indexes
 #
