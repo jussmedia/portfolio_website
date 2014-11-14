@@ -14,3 +14,7 @@ env:
     - CI=true
 gemfile:
   - Gemfile
+addons:
+  code_climate:
+    repo_token:
+      secure: "dTGLOb90KFHbNAOXBZiOHm+otvSo4VqzA4xYy+Zx3McloVO7w0S16R80BZpC8A1ZOAb8cAKiqPJThapU6qEAoz0+u04tMPTDNczix3rtlNW64NfdOyKz+OA2KReQLEv/rn3SJ+Man4CSCQJRgTOdHZhdMfzWTpHRcgLvMAeOv4g="
