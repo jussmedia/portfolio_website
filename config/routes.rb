@@ -5,6 +5,8 @@ Rails.application.routes.draw do
 
   get 'about/index'
 
+  # OmniAuthentications will be handled by the AuthenticationsController
+  # get "/auth/:provider/callback" => "authentications#create"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
