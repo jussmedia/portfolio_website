@@ -1,9 +1,14 @@
 Rails.application.routes.draw do
+  concern :paginatable do
+    get '(page/:page)', :action => :index, :on => :collection, :as => ''
+  end
+
+
 
   root :to => "home#index"
 
   namespace :blog do
-    resources :posts
+    resources :posts, :concerns => :paginatable
 
     # Root for blog site
     get '/' => 'posts#index'
