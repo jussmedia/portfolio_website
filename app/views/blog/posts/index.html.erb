@@ -8,7 +8,7 @@
         <!-- need to check and insert image if applicable -->
         <%= render partial: 'post_info', locals: {post: post}%>
         <p>
-          <%= post.body %>
+          <%= truncate(post.body, length: 300, separator: ' ') %>
         </p>
         <%= link_to 'Read more', post, class: 'arrow_link'%>
       </div>
