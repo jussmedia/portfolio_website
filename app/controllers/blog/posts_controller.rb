@@ -4,7 +4,7 @@ class Blog::PostsController < Blog::BaseController
   # GET /blog/posts
   # GET /blog/posts.json
   def index
-    @blog_posts = Blog::Post.all
+    @blog_posts = Blog::Post.all.page(params[:page])
   end
 
   # GET /blog/posts/1

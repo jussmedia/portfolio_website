@@ -20,16 +20,8 @@
   <% end %>
 </ul>
 
-<%# NEED TO IMPLEMENT PAGINATION TOOL %>
-<nav>
-  <ul class="pagination">
-    <li><a href="#">&larr;</a></li>
-    <li class="active"><a href="#">10</a></li>
-    <li class="disabled"><a href="#">...</a></li>
-    <li><a href="#">20</a></li>
-    <li><a href="#">&rarr;</a></li>
-  </ul>
-</nav>
+<%= paginate @blog_posts, :left => 1, :right => 1 %>
+
 <br>
 <%= link_to 'New Post', new_blog_post_path, class: 'new_post' %>
 <% end %>
