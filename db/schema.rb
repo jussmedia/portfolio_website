@@ -33,7 +33,7 @@ ActiveRecord::Schema.define(version: 20141118143633) do
   add_index "blog_taggings", ["tags_id"], name: "index_blog_taggings_on_tags_id", using: :btree
 
   create_table "blog_tags", force: true do |t|
-    t.string   "name"
+    t.string   "name",       null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
