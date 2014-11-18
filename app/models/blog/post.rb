@@ -1,4 +1,6 @@
 class Blog::Post < ActiveRecord::Base
+  has_many :tags, through: :taggings
+  has_many :taggings
 
   validates :title, :body, :author, presence: true
 end
