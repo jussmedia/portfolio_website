@@ -1,7 +1,9 @@
 require "test_helper"
 
 describe Blog::Post do
+
   let(:post) { blog_posts :unpublished }
+  let(:published) { blog_posts :published }
   let(:invalid_post) { Blog::Post.new }
 
   it "must be valid" do
@@ -10,6 +12,13 @@ describe Blog::Post do
 
   it 'must have default for published' do
     invalid_post.published.must_equal false
+  end
+
+  describe 'default scope' do
+    
+    it 'must order descending' do
+      Blog::Post.all.must_equal [published, post]
+    end
   end
 
   describe 'validates presence' do
