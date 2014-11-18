@@ -1,7 +1,17 @@
 Rails.application.routes.draw do
-  get 'about/index'
 
   root :to => "home#index"
+
+  namespace :blog do
+    resources :posts
+
+    # Root for blog site
+    get '/' => 'posts#index'
+  end
+
+  get 'about/index'
+
+
 
 
   # The priority is based upon order of creation: first created -> highest priority.

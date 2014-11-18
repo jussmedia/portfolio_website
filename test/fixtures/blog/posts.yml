@@ -1,0 +1,14 @@
+# Read about fixtures at
+# http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+unpublished:
+  title: Hello World
+  body: This is a test fixture blog post
+  published: false
+  author: John Doe
+
+published:
+  title: I'm published
+  body: I am a published blog post
+  published: true
+  author: Stephen King
