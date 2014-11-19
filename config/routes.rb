@@ -12,6 +12,8 @@ Rails.application.routes.draw do
 
     # Root for blog site
     get '/' => 'posts#index'
+
+    resources :tags
   end
 
   get 'about/index'
