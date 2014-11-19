@@ -24,13 +24,13 @@ ActiveRecord::Schema.define(version: 20141118143633) do
 
   create_table "blog_taggings", force: true do |t|
     t.integer  "post_id"
-    t.integer  "tags_id"
+    t.integer  "tag_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   add_index "blog_taggings", ["post_id"], name: "index_blog_taggings_on_post_id", using: :btree
-  add_index "blog_taggings", ["tags_id"], name: "index_blog_taggings_on_tags_id", using: :btree
+  add_index "blog_taggings", ["tag_id"], name: "index_blog_taggings_on_tag_id", using: :btree
 
   create_table "blog_tags", force: true do |t|
     t.string   "name",       null: false

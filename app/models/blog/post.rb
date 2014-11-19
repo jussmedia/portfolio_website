@@ -1,8 +1,7 @@
 class Blog::Post < ActiveRecord::Base
   default_scope { order(created_at: :desc) }
-
-  has_many :tags, through: :taggings
   has_many :taggings
+  has_many :tags, through: :taggings
 
   validates :title, :body, :author, presence: true
 end
