@@ -3,8 +3,8 @@
 
 one:
   post: unpublished
-  tags: [one, two]
+  tag: [one, two]
 
 two:
   post: published
-  tags: [three, four]
+  tag: [three, four]
