@@ -14,6 +14,10 @@ describe Blog::Post do
     invalid_post.published.must_equal false
   end
 
+  it 'must include the date in the slug' do
+    post.friendly_id.must_equal post.slug
+  end
+
   describe 'default scope' do
     
     it 'must order descending' do
@@ -22,7 +26,7 @@ describe Blog::Post do
   end
 
   describe 'validates presence' do
-    [:title, :body, :author].each do |field|
+    [:title, :body, :author, :slug].each do |field|
 
       it "must contain #{field}" do
         invalid_post.valid?
