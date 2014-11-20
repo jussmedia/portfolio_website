@@ -6,10 +6,11 @@ class Blog::Post < ActiveRecord::Base
   has_many :taggings
   has_many :tags, through: :taggings
 
-  validates :title, :body, :author, presence: true
+  validates :title, :body, :author, :slug, presence: true
 
   def date_and_title
-    "#{Time.now.strftime('%Y %m %d')} #{title}"
+    date = created_at || Time.now
+    "#{date.strftime('%Y %m %d')} #{title}" if created_at.present?
   end
 
   def should_generate_new_friendly_id?
