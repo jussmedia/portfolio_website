@@ -1,9 +1,20 @@
 class Blog::Post < ActiveRecord::Base
+  extend FriendlyId
+  friendly_id :date_and_title, use: [:slugged, :finders]
+
   default_scope { order(created_at: :desc) }
   has_many :taggings
   has_many :tags, through: :taggings
 
   validates :title, :body, :author, presence: true
+
+  def date_and_title
+    "#{Time.now.strftime('%Y %m %d')} #{title}"
+  end
+
+  def should_generate_new_friendly_id?
+    title_changed?
+  end
 end
 
 # == Schema Information
@@ -17,4 +28,5 @@ end
 #  author     :string(255)      not null
 #  created_at :datetime
 #  updated_at :datetime
+#  slug       :string(255)      not null
 #

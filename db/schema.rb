@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141118143633) do
+ActiveRecord::Schema.define(version: 20141120011719) do
 
   create_table "blog_posts", force: true do |t|
     t.string   "title",                      null: false
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 20141118143633) do
     t.string   "author",                     null: false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "slug",                       null: false
   end
 
   create_table "blog_taggings", force: true do |t|
@@ -36,6 +37,7 @@ ActiveRecord::Schema.define(version: 20141118143633) do
     t.string   "name",       null: false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "slug",       null: false
   end
 
 end
