@@ -3,6 +3,10 @@ Rails.application.routes.draw do
     get '(page/:page)', :action => :index, :on => :collection, :as => ''
   end
 
+  concern :id_paginatable do
+    get '(:id/page/:page)', :action => :show, :on => :collection, :as => ''
+  end
+
 
 
   root :to => "home#index"
@@ -13,7 +17,7 @@ Rails.application.routes.draw do
     # Root for blog site
     get '/' => 'posts#index'
 
-    resources :tags
+    resources :tags, :concerns => :id_paginatable
   end
 
   get 'about/index'

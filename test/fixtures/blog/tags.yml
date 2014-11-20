@@ -3,12 +3,16 @@
 
 one:
   name: technology
+  slug: technology
 
 two:
   name: ruby
+  slug: ruby
 
 three:
   name: rails
+  slug: rails
 
 four:
   name: development
+  slug: development
