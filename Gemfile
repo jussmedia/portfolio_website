@@ -69,6 +69,8 @@ group :development do
 
 end
 
+gem 'pry-nav', :group => [:development, :test]
+
 group :test do
   #Minitest integration for Rails 4.1+
   # rails g minitest:install

@@ -10,7 +10,7 @@ class Blog::Post < ActiveRecord::Base
 
   def date_and_title
     date = created_at || Time.now
-    "#{date.strftime('%Y %m %d')} #{title}" if created_at.present?
+    "#{date.strftime('%Y %m %d')} #{title}"
   end
 
   def should_generate_new_friendly_id?
