@@ -22,3 +22,10 @@
 en:
   site_name: "Portfolio Website"
   tag_line: "Your Portfolio website"
+  views:
+      pagination:
+        first: "&laquo; First"
+        last: "Last &raquo;"
+        previous: "&lsaquo; Prev"
+        next: "Next &rsaquo;"
+        truncate: "&hellip;"

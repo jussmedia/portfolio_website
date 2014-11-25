@@ -1,0 +1,18 @@
+# Read about fixtures at
+# http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: technology
+  slug: technology
+
+two:
+  name: ruby
+  slug: ruby
+
+three:
+  name: rails
+  slug: rails
+
+four:
+  name: development
+  slug: development

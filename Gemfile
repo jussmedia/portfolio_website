@@ -17,10 +17,11 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
+gem 'kaminari'
 
+gem 'friendly_id', '~> 5.0.0' # Note: You MUST use 5.0.0 or greater for Rails 4.0+
 
-# gem 'owlcarousel-rails'
-
+gem 'ancestry'
 # *****************
 #
 # ASSETS
@@ -70,12 +71,15 @@ group :development do
 
 end
 
+gem 'pry-nav', :group => [:development, :test]
+
 group :test do
   #Minitest integration for Rails 4.1+
   # rails g minitest:install
   gem 'minitest-rails', github: 'blowmage/minitest-rails'
   gem 'minitest-spec-rails', github: 'metaskills/minitest-spec-rails'
   gem "codeclimate-test-reporter", require: nil
+
 end
 
 # Use ActiveModel has_secure_password

@@ -1,7 +1,30 @@
 Rails.application.routes.draw do
-  get 'about/index'
+
+  concern :paginatable do
+    get '(page/:page)', :action => :index, :on => :collection, :as => ''
+  end
+
+  concern :id_paginatable do
+    get '(:id/page/:page)', :action => :show, :on => :collection, :as => ''
+  end
+
+
 
   root :to => "home#index"
+
+  namespace :blog do
+    resources :posts, :concerns => :paginatable, shallow: true do
+      resources :comments, except: [:show, :index]
+    end
+    # Root for blog site
+    get '/' => 'posts#index'
+
+    resources :tags, :concerns => :id_paginatable
+  end
+
+  get 'about/index'
+
+
 
 
   # The priority is based upon order of creation: first created -> highest priority.

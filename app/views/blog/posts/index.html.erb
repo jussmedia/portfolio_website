@@ -1,0 +1,31 @@
+<% content_for :post do %>
+
+<ul id="posts">
+  <% if @blog_posts.present? %>
+    <% @blog_posts.each do |post| %>
+      <div class="post">
+        <h2 class="title"><span><%= link_to post.title, post%></span></h2>
+        <!-- need to check and insert image if applicable -->
+        <%= render partial: 'post_info', locals: {post: post}%>
+        <p>
+          <%= truncate(post.body, length: 300, separator: ' ') %>
+        </p>
+        <%= link_to 'Read more', post, class: 'arrow_link'%>
+      </div>
+    <% end %>
+  <% else %>
+    <div class="post">
+      <h2 class="title"><span>NO POSTS</span></h2>
+    </div>
+  <% end %>
+</ul>
+
+<%= paginate @blog_posts, :left => 1, :right => 1 %>
+
+<br>
+<%= link_to 'New Post', new_blog_post_path, class: 'new_post' %>
+<% end %>
+
+<% content_for :widgets do %>
+  I'm a widget section
+<% end %>

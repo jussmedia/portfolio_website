@@ -1,0 +1,10 @@
+# Read about fixtures at
+# http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  post: unpublished
+  tag: [one, two]
+
+two:
+  post: published
+  tag: [three, four]
