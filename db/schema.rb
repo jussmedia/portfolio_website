@@ -11,7 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141120011719) do
+ActiveRecord::Schema.define(version: 20141121225334) do
+
+  create_table "blog_comments", force: true do |t|
+    t.text     "body",                       null: false
+    t.string   "author",                     null: false
+    t.boolean  "approved",   default: false, null: false
+    t.string   "ancestry"
+    t.integer  "post_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "blog_comments", ["ancestry"], name: "index_blog_comments_on_ancestry", using: :btree
+  add_index "blog_comments", ["author"], name: "index_blog_comments_on_author", using: :btree
+  add_index "blog_comments", ["post_id"], name: "index_blog_comments_on_post_id", using: :btree
 
   create_table "blog_posts", force: true do |t|
     t.string   "title",                      null: false

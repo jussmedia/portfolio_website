@@ -1,0 +1,14 @@
+# Read about fixtures at
+# http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  body: I am the first comment ever
+  author: Daffy Duck
+  approved: false
+  post: published
+
+two:
+  body: Just another comment
+  author: Gooft
+  approved: true
+  post: published

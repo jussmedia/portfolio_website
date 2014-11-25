@@ -20,6 +20,8 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'kaminari'
 
 gem 'friendly_id', '~> 5.0.0' # Note: You MUST use 5.0.0 or greater for Rails 4.0+
+
+gem 'ancestry'
 # *****************
 #
 # ASSETS
@@ -77,6 +79,7 @@ group :test do
   gem 'minitest-rails', github: 'blowmage/minitest-rails'
   gem 'minitest-spec-rails', github: 'metaskills/minitest-spec-rails'
   gem "codeclimate-test-reporter", require: nil
+
 end
 
 # Use ActiveModel has_secure_password
