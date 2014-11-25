@@ -785,38 +785,11 @@ div.foot_logo {
 				background-color: #f5f5f5;
 			}
 		}
-    // &.first {
-    //   border-left-width: 1px;
-    //   //Instead of the line below you could use @includeborder-radius($radius, $vertical-radius)
-    //   border-radius: 3px 0 0 3px;
-    // }
 
-    //
-		// }
-		// &:last-child > {
-		// 	a {
-		// 		//Instead of the line below you could use @includeborder-radius($radius, $vertical-radius)
-		// 		border-radius: 0 3px 3px 0;
-		// 	}
-		// }
 	  &.current > {
 			background-color: #f5f5f5;
 			color: #999999;
 			cursor: default;
 	  }
-  	// .disabled > {
-  	// 	a {
-  	// 		color: #999999;
-  	// 		cursor: default;
-  	// 		background-color: transparent;
-  	// 		background-color: #fff;
-  	// 		&:hover {
-  	// 			color: #999999;
-  	// 			cursor: default;
-  	// 			background-color: transparent;
-  	// 			background-color: #fff;
-  	// 		}
-  	// 	}
-  	// }
   }
 }

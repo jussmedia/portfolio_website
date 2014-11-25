@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   concern :paginatable do
     get '(page/:page)', :action => :index, :on => :collection, :as => ''
   end
@@ -12,8 +13,9 @@ Rails.application.routes.draw do
   root :to => "home#index"
 
   namespace :blog do
-    resources :posts, :concerns => :paginatable
-
+    resources :posts, :concerns => :paginatable, shallow: true do
+      resources :comments, except: [:show, :index]
+    end
     # Root for blog site
     get '/' => 'posts#index'
 
