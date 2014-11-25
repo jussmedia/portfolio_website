@@ -16,9 +16,27 @@
     <p>Aenean iaculis sodales dui, non hendrerit lorem rhoncus ut. Pellentesque ullamcorper venenatis elit id adipiscing. Duis tellus neque, tincidunt eget pulvinar sit amet, rutrum nec urna. Suspendisse pretium laoreet elit vel ultricies. Proin risus nisl, convallis vitae dignissim sit amet, malesuada a lacus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ullamcorper ultricies rhoncus. Aliquam erat volutpat. Quisque magna quam, ullamcorper vel elementum non, consequat sed sem. Proin sed massa nec justo adipiscing aliquam eget vel magna. Quisque urna nibh, vestibulum a varius at, <a href="#">varius sed tellus.</a></p>
 </div>
 
-<%= link_to 'Edit', edit_blog_post_path(@blog_post) %> |
-<%= link_to 'Delete', blog_post_path(@blog_post), method: :delete, data: {confirm: "Really delete the post?"} %> |
+<!-- Comments -->
+<h4><%= "#{@blog_post.comments.count} #{"Comment".pluralize(@blog_post.comments.count)}" %></h4>
+  <div id="comments">
+    <ol>
+      <% @blog_post.comments.each do | comment | %>
+      <li>
+        <div class="avatar"><%= link_to(image_tag('placeholder/avatar1.png', size: "68x68" )) %> </div>
+        <div class="comment_right">
+          <%= render partial: 'blog/comments/comment_info', locals: {comment: comment} %>
+          <%= comment.body %>
+        </div>
+        <div class="clear"></div>
+        <% #comment.render_replies if comment.has_replies?%>
+      </li>
+      <% end %>
+    </ol>
+  </div>
+  <!-- //Comments -->
 
+  <%= link_to 'Edit', edit_blog_post_path(@blog_post) %> |
+  <%= link_to 'Delete', blog_post_path(@blog_post), method: :delete, data: {confirm: "Really delete the post?"} %> |
 
-<%= link_to '<< Back to Posts List', blog_posts_path %>
+  <%= link_to '<< Back to Posts List', blog_posts_path %>
 <% end %>

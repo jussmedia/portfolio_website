@@ -16,6 +16,7 @@ tag_count.times  do
   p.increment
 end
 
+
 #******************
 #
 # Lets create some sample blog posts
@@ -33,5 +34,27 @@ post_count.times do
   tags = Blog::Tag.find((1...10).to_a.sample((1...5).to_a.sample))
   post.tags << tags
   post.save
+  p.increment
+end
+
+
+
+#******************
+#
+# Lets create some sample comments
+#
+#******************
+puts 'Creating sample comments'
+comment_count = 10
+p = ProgressBar.create(title: 'Sample Tags', total: tag_count)
+comment_count.times  do
+  comment = Blog::Comment.new(author: Faker::Name.name,
+                body: Faker::Lorem.paragraph([2...8].sample),
+                approved: [true, false].sample,
+                created_at: Faker::Time.between(5.months.ago, Time.now))
+
+  post = Blog::Post.find((1...post_count).to_a.sample)
+  comment.post = post
+  comment.save
   p.increment
 end

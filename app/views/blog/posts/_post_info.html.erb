@@ -4,6 +4,6 @@
       <%= link_to tag.name, blog_tag_path(tag) %>
     <% end %>
   </div>
-    <div class="fright"><%#= link_to post.comments.count, blog_post_comments_path(post) %> Comments</div>
+    <div class="fright"><%= link_to post.comments.count, blog_post_comments_path(post) %> Comments</div>
   <div class="clear"></div>
 </div>

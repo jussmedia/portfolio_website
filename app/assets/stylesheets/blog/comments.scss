@@ -1,0 +1,42 @@
+// Place all the styles related to the blog/comments controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+#comments {
+  padding: 0 0 7px 0;
+  margin-bottom: 25px;
+  ul, ol {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  li {
+    padding: 0 0 23px 0;
+    list-style: none;
+  }
+}
+
+.avatar {
+  float: left;
+  margin-right: 11px;
+  img {
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+  }
+}
+
+.comment_right {
+  display: table;
+}
+
+.comment_info {
+  padding-bottom: 7px;
+  span {
+    padding: 0 12px;
+  }
+}
+
+#comments ol li ul li {
+  padding: 23px 0 0 30px;
+  margin: 0;
+}
