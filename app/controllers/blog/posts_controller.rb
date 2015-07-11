@@ -10,11 +10,13 @@ class Blog::PostsController < Blog::BaseController
   # GET /blog/posts/1
   # GET /blog/posts/1.json
   def show
+    @attachments = @blog_post.attachments
   end
 
   # GET /blog/posts/new
   def new
     @blog_post = Blog::Post.new
+    @blog_post.attachments.build
   end
 
   # GET /blog/posts/1/edit
@@ -69,6 +71,6 @@ class Blog::PostsController < Blog::BaseController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def blog_post_params
-      params.require(:blog_post).permit(:title, :body, :published, :author)
+      params.require(:blog_post).permit(:title, :body, :published, :author, :attachment_attributes)
     end
 end

@@ -6,7 +6,9 @@ class Blog::Post < ActiveRecord::Base
   has_many :taggings
   has_many :tags, through: :taggings
   has_many :comments
-  
+  has_many :attachments, dependent: :destroy
+
+  accepts_nested_attributes_for :attachments, allow_destroy: true
   validates :title, :body, :author, :slug, presence: true
 
   def date_and_title

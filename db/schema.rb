@@ -11,7 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141121225334) do
+ActiveRecord::Schema.define(version: 20141203164328) do
+
+  create_table "blog_attachments", force: true do |t|
+    t.string   "file"
+    t.integer  "post_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "blog_attachments", ["post_id"], name: "index_blog_attachments_on_post_id", using: :btree
 
   create_table "blog_comments", force: true do |t|
     t.text     "body",                       null: false

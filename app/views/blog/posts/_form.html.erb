@@ -1,4 +1,5 @@
-<%= form_for(@blog_post) do |f| %>
+<% content_for :post do %>
+<%= form_for @blog_post, html: {multipart: true} do |f| %>
   <% if @blog_post.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@blog_post.errors.count, "error") %> prohibited this blog_post from being saved:</h2>
@@ -27,7 +28,16 @@
     <%= f.label :author %><br>
     <%= f.text_field :author %>
   </div>
+
+  <% binding.pry %>
+  <%= f.file_field :attachments %>
+  
+  <% f.fields_for :attachments do |attachment| %>
+    <%= attachment.file_field :file %>
+  <% end -%>
+
   <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>
+<% end -%>

@@ -1,6 +1,5 @@
 class Blog::Comment < ActiveRecord::Base
   belongs_to :post
-  has_ancestry
 
   validates :body, :author, presence: true
 end

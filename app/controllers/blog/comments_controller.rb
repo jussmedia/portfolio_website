@@ -1,4 +1,4 @@
-class Blog::CommentsController < ApplicationController
+class Blog::CommentsController < Blog::BaseController
   before_action :set_blog_comment, only: [:edit, :update, :destroy]
 
 
